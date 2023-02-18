@@ -1,0 +1,71 @@
+.login {
+  height: 100vh;
+  width: 100%;
+  background-color: #000000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+}
+.login .login__form {
+  height: auto;
+  min-height: 300px;
+  width: 320px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.login .login__form .login-form__description {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  color: #ffffff;
+  margin-bottom: 20px;
+  text-transform: capitalize;
+}
+.login .login__form .login-form__input {
+  box-sizing: border-box;
+  width: 320px;
+  height: 52px;
+  border: 1px solid #ffffff;
+  border-radius: 4px;
+  background: none;
+  margin-bottom: 20px;
+  padding-left: 20px;
+  color: #ffffff;
+}
+.login .login__form .login-form__input::-moz-placeholder {
+  text-transform: capitalize;
+}
+.login .login__form .login-form__input::placeholder {
+  text-transform: capitalize;
+}
+.login .login__form .login-form__forgot {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #ffffff;
+  margin-top: 20px;
+}
+.login .login__form .login-form__terms-container {
+  width: 320px;
+  height: 78px;
+  background: #171717;
+  border-radius: 6px;
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.login .login__form .login-form__terms-container .login_form__terms-text {
+  height: 34px;
+  padding: 0 20px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #ffffff;
+  opacity: 0.6;
+}/*# sourceMappingURL=style.css.map */
