@@ -24,10 +24,10 @@ function Home() {
         <div className="left_card">
           <div className="box">
             <div className="cover">
-              <img src={onlyTrack.cover} alt='cover'/>
+              <img src={onlyTrack?.cover} alt='cover'/>
             </div>
-            <div className="track_name">{onlyTrack.name}</div>
-            <div className="artist_name">{onlyTrack.artist.map(art=>art.name)}</div>
+            <div className="track_name">{onlyTrack?.name}</div>
+            <div className="artist_name">{onlyTrack?.artist.map(art=>art?.name)}</div>
           </div>
         </div>
         <div className="tracks_home_container">
@@ -56,7 +56,7 @@ function Home() {
             />
           </div>
           {tracks?.map((track) => {
-            return <Track  key={track?._id} cover={track?.cover}  track={track?.name} artist={track?.artist.map((art)=>art.name)} url={track?.url} category={track?.category.map(cat=>cat.category)} id={track?._id} />;
+            return <Track  key={track?._id} cover={track?.cover}  track={track?.name} artist={track?.artist.map((art)=>art.name)} url={track?.url} category={track?.category.map(cat=>cat?.category)} id={track?._id} />;
           })}
         </div>
       </div>
