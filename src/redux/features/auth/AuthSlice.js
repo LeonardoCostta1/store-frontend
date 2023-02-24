@@ -1,5 +1,5 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import { http } from "../../services/axios";
+import { http } from "../../../services/axios";
 
 export const verifyToken = createAsyncThunk(
   "auth/verifyToken",
@@ -10,8 +10,6 @@ export const verifyToken = createAsyncThunk(
           Authorization: token
         }
       });
-
-      console.log(response.data);
       return response.data;
     } catch (error) {
       console.error(error);
@@ -41,6 +39,7 @@ const authSlice = createSlice({
     builder
       .addCase(verifyToken.fulfilled, (state, action) => {
         state.loggedIn = action.payload;
+        state.token = localStorage.getItem("token")
       })
       .addCase(verifyToken.rejected, (state, action) => {
         state.loggedIn = false;

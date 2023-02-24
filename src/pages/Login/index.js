@@ -4,15 +4,11 @@ import "./style.css";
 import Button from "../../components/Button";
 import { useLoginFetch } from "../../hooks/useLoginFetch";
 import { useSelector } from "react-redux";
-import { Navigate } from "react-router-dom";
-
+import { Loader } from "semantic-ui-react";
 function Login() {
-  const [handleLogin, handleEmailChange, handlePasswordChange] =
-    useLoginFetch();
-  const authenticated = useSelector((state) => state.auth.loggedIn);
-  if (authenticated) {
-    return <Navigate replace to="/" />;
-  } else {
+  const [handleLogin, handleEmailChange, handlePasswordChange] = useLoginFetch();
+  const loading = useSelector((state) => state.loading.value);
+
     return (
       <div className="login">
         <form className="login__form" onSubmit={handleLogin}>
@@ -31,7 +27,7 @@ function Login() {
           ></input>
           <Button
             type={"primary"}
-            title={"sign in"}
+            title={loading ? <Loader active inline="centered" /> : "sign in"}
             fill={"fill"}
             onClick={handleLogin}
           />
@@ -46,6 +42,4 @@ function Login() {
       </div>
     );
   }
-}
-
 export default Login;

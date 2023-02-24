@@ -1,0 +1,58 @@
+.home_wrapper {
+  background: #000;
+  color: #ffffff;
+  min-height: 100vh;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  padding-top: 70px;
+}
+.home_wrapper .home_container {
+  width: calc(100% - 200px);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+.home_wrapper .home_container .left_card {
+  width: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 60px;
+  position: sticky;
+  top: 100px;
+}
+.home_wrapper .home_container .left_card .box {
+  width: 320px;
+  height: 479px;
+  border-radius: 25px;
+}
+.home_wrapper .home_container .left_card .box .track_name {
+  font-size: 18px;
+  color: #d9d9d9;
+}
+.home_wrapper .home_container .left_card .box .artist_name {
+  color: #797979;
+}
+.home_wrapper .home_container .tracks_home_container {
+  width: calc(100% - 400px);
+}
+.home_wrapper .home_container .tracks_home_container .filter_container {
+  height: 30px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin: 20px 0;
+}
+.home_wrapper .home_container .tracks_home_container .filter_container .filter_name {
+  text-transform: uppercase;
+  font-size: #797979;
+  font-size: 10px;
+  cursor: pointer;
+}
+.home_wrapper .home_container .tracks_home_container .filter_container .filter_name i {
+  font-size: 10px;
+}/*# sourceMappingURL=style.css.map */

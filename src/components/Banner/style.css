@@ -1,0 +1,26 @@
+.banner_wrapper {
+  height: 55vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(rgba(0, 0, 0, 0), #000 90%), url("https://images.pexels.com/photos/1916821/pexels-photo-1916821.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+}
+.banner_wrapper .text_banner_container {
+  width: 683px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.banner_wrapper .text_banner_container .text {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 56px;
+  line-height: 68px;
+  text-transform: capitalize;
+  color: #ffffff;
+  margin-bottom: 20px;
+}/*# sourceMappingURL=style.css.map */

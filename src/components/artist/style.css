@@ -1,0 +1,16 @@
+.artist_wrapper {
+  width: 158.75px;
+  height: 158.75px;
+  background: #171717;
+  border-radius: 150px;
+  cursor: pointer;
+  transition: all ease 0.2s;
+}
+.artist_wrapper img {
+  width: 100%;
+  height: 100%;
+  border-radius: 150px;
+}
+.artist_wrapper:hover {
+  opacity: 0.8;
+}/*# sourceMappingURL=style.css.map */

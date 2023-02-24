@@ -4,14 +4,15 @@ import { useDispatch } from "react-redux";
 import {
   setLoadingFalse,
   setLoadingTrue
-} from "../features/loading/LoadingSlice";
-import { verifyToken } from "../features/auth/AuthSlice";
+} from "../redux/features/loading/LoadingSlice";
+import { useNavigate } from "react-router-dom";
 
 export function useLoginFetch() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState(null);
   const dispatch = useDispatch();
+  const navigate = useNavigate()
 
   const handleEmailChange = (event) => {
     setEmail(event.target.value.toString());
@@ -31,7 +32,7 @@ export function useLoginFetch() {
       })
       .then((response) => {
         localStorage.setItem("token", response.data.tokens.token);
-        verifyToken(response.data.tokens.token);
+        navigate('/')
         dispatch(setLoadingFalse());
       })
       .catch((error) => {

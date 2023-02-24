@@ -1,0 +1,17 @@
+@import '../../variables/variables';
+.artist_wrapper{
+    width: 158.75px;
+    height: 158.75px;
+    background: $darkgray;
+    border-radius: 150px;
+    cursor: pointer;
+    transition: all ease .2s;
+    img{
+        width: 100%;
+        height: 100%;
+        border-radius: 150px;
+    }
+    &:hover{
+        opacity: .8;
+    }
+}

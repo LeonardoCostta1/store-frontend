@@ -1,0 +1,9 @@
+@import '../../variables/variables';
+.profile_wrapper{
+    background: $dark;
+    color: $white;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

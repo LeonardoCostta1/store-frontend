@@ -1,0 +1,16 @@
+.title {
+    height: 60px;
+    // padding: 0 30px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  .title_default {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 27px;
+    text-transform: capitalize;
+    color: #ffffff;
+  }
+}

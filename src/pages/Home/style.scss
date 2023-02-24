@@ -1,0 +1,59 @@
+@import '../../variables/variables';
+.home_wrapper {
+  background: $dark;
+  color: $white;
+  min-height: 100vh;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  padding-top: 70px;
+  .home_container {
+    width: calc(100% - $side);
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    .left_card {
+        width: 400px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        margin-top: 60px;
+        position: sticky;
+        top: 100px;
+        .box {
+          width: 320px;
+          height: 479px;
+          border-radius: 25px;
+          .track_name{
+            font-size: 18px;
+            color: $text;
+          }
+          .artist_name{
+            color: $textColor;
+          }
+        }
+      }
+      .tracks_home_container{
+        width: calc(100% - 400px);
+        .filter_container{
+          height: 30px;
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: flex-end;
+          margin: 20px 0;
+          .filter_name{
+            text-transform: uppercase;
+            font-size: $textColor;
+            font-size: 10px;
+            cursor: pointer;
+            i{
+              font-size: 10px;
+            }
+          }
+        }
+      }
+  }
+}

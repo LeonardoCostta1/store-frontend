@@ -7,15 +7,20 @@
   text-transform: capitalize;
   font-weight: 600;
   transition: all ease 0.2s;
+  background: #F1FA55;
+  background: linear-gradient(-90deg, #FD513E, rgb(254, 64, 253));
+  color: #ffffff;
+  border-radius: 62px;
   cursor: pointer;
 }
 .btn:hover {
   opacity: 0.7;
 }
 
-.btn--primary {
-  background: #FFDA2A;
-  border-radius: 62px;
+.btn--small {
+  height: 30px;
+  width: auto;
+  padding: 0 20px;
 }
 
 .btn--fill {

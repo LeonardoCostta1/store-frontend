@@ -1,0 +1,80 @@
+@import '../../variables/variables';
+.menu_wrapper {
+  background: $dark;
+  width: 100%;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  z-index: 8888;
+  .menu_container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    width: calc(100% - ($side / 2));
+    .user_wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .icon_top {
+        width: 35px;
+        height: 35px;
+        border-radius: 35px;
+        background: $darkgray;
+        margin: 0 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: $white;
+        cursor: pointer;
+        i {
+          font-size: 12px;
+        }
+      }
+      .cart_container {
+      }
+      .user_container {
+        width: 35px;
+        height: 35px;
+        border-radius: 35px;
+        background: $darkgray;
+      }
+
+      .username_container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: $white;
+        .username_text {
+          text-transform: capitalize;
+          color: $textColor;
+        }
+      }
+    }
+  }
+}
+.signout {
+  cursor: pointer;
+  height: 40px;
+  width: 100%;
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  text-transform: capitalize;
+  font-weight: 500;
+  a{
+    color: $white;
+  }
+  &:hover{
+    background: #ffffff23;
+  }
+}
+
+.pop{
+  width: 150px!important;
+  padding: 0;
+}

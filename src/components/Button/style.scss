@@ -8,14 +8,21 @@
   text-transform: capitalize;
   font-weight: 600;
   transition: all ease 0.2s;
+  background: $color;
+  background: linear-gradient(-90deg,$linearGradient);
+  color: $white;
+  border-radius: 62px;
   cursor: pointer;
   &:hover {
     opacity: 0.7;
   }
 }
-.btn--primary {
-  background: $color;
-  border-radius: 62px;
+.btn--small {
+
+  height: 30px;
+  width: auto;
+  padding: 0 20px;
+
 }
 .btn--fill {
   width: 100%;
