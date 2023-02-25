@@ -8,35 +8,16 @@
   align-items: center;
   justify-content: flex-start;
   flex-direction: column;
-  padding-top: 70px;
+  padding: 100px 0;
   .home_container {
     width: calc(100% - $side);
     display: flex;
     align-items: flex-start;
     justify-content: center;
-    .left_card {
-        width: 400px;
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
-        margin-top: 60px;
-        position: sticky;
-        top: 100px;
-        .box {
-          width: 320px;
-          height: 479px;
-          border-radius: 25px;
-          .track_name{
-            font-size: 18px;
-            color: $text;
-          }
-          .artist_name{
-            color: $textColor;
-          }
-        }
-      }
+    position: relative;
+    z-index: 20;
       .tracks_home_container{
-        width: calc(100% - 400px);
+        width: 100%;
         .filter_container{
           height: 30px;
           width: 100%;

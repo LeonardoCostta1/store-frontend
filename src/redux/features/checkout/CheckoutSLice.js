@@ -3,9 +3,7 @@ import { http } from "../../../services/axios";
 
 export const getCheckout = createAsyncThunk("track/getCheckout",async (checkoutData) => {
     try {
-      
       const response = await http.put(`/checkout/${checkoutData.userId}`,
-
         {
           transaction_amount: checkoutData.transaction_amount,
           description: checkoutData.description,

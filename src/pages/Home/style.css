@@ -7,37 +7,18 @@
   align-items: center;
   justify-content: flex-start;
   flex-direction: column;
-  padding-top: 70px;
+  padding: 100px 0;
 }
 .home_wrapper .home_container {
-  width: calc(100% - 200px);
+  width: calc(100% - 100px);
   display: flex;
   align-items: flex-start;
   justify-content: center;
-}
-.home_wrapper .home_container .left_card {
-  width: 400px;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  margin-top: 60px;
-  position: sticky;
-  top: 100px;
-}
-.home_wrapper .home_container .left_card .box {
-  width: 320px;
-  height: 479px;
-  border-radius: 25px;
-}
-.home_wrapper .home_container .left_card .box .track_name {
-  font-size: 18px;
-  color: #d9d9d9;
-}
-.home_wrapper .home_container .left_card .box .artist_name {
-  color: #797979;
+  position: relative;
+  z-index: 20;
 }
 .home_wrapper .home_container .tracks_home_container {
-  width: calc(100% - 400px);
+  width: 100%;
 }
 .home_wrapper .home_container .tracks_home_container .filter_container {
   height: 30px;

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./style.css";
 import Logo from "../Logo";
 import Button from "../Button";
@@ -10,8 +10,15 @@ function Menu() {
   const auth = useSelector((state) => state.auth.loggedIn);
   const dispatch = useDispatch()
 
+  const [scroll, setScroll] = useState(false);
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      setScroll(window.scrollY > 50);
+    });
+  }, [])
+
   return (
-    <div className="menu_wrapper">
+    <div className={`menu_wrapper ${scroll ? "active" : ""}`}>
       <div className="menu_container">
         <Logo />
         <div className="user_wrapper">

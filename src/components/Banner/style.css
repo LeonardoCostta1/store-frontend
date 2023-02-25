@@ -1,10 +1,26 @@
 .banner_wrapper {
-  height: 55vh;
+  height: 40vh;
   width: 100%;
+  background-size: cover;
+  background-position: bottom;
+  background-attachment: fixed;
+  background-position: 500px -250px;
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(rgba(0, 0, 0, 0), #000 90%), url("https://images.pexels.com/photos/1916821/pexels-photo-1916821.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+}
+.banner_wrapper .overlay {
+  height: 110vh;
+  width: 100%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0), #000 80%), url(../../assets/malha2.png);
+  position: absolute;
+  z-index: 1;
+}
+.banner_wrapper #background-video {
+  width: 100%;
+  position: absolute;
+  z-index: 0;
 }
 .banner_wrapper .text_banner_container {
   width: 683px;
@@ -13,6 +29,8 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  position: relative;
+  z-index: 10;
 }
 .banner_wrapper .text_banner_container .text {
   font-family: "Inter";

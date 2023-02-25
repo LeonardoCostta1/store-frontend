@@ -11,8 +11,9 @@ function ArtistList() {
     infinite: true,
     speed: 500,
     arrows:false,
-    slidesToShow: 7,
-    slidesToScroll: 7,
+    centerMode:true,
+    slidesToShow: 9,
+    slidesToScroll: 9,
     initialSlide: 0,
     responsive: [
       {
@@ -46,7 +47,9 @@ function ArtistList() {
     <div className="artistList_wrapper">
       <Slider {...settings}>
         {artists?.map((artist,index) => {
-          return <Artist key={index} cover={artist?.cover}/>;
+          console.log(artist?.artist.map((art)=>art.name))
+
+          return <Artist key={index} cover={artist?.cover} name={artist?.artist.map((art)=>art.name)}/>;
         })}
       </Slider>
     </div>

@@ -1,16 +1,26 @@
-.artist_wrapper {
+.artist_box_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.artist_box_container .artist_wrapper {
   width: 158.75px;
   height: 158.75px;
   background: #171717;
   border-radius: 150px;
   cursor: pointer;
   transition: all ease 0.2s;
+  margin-bottom: 10px;
 }
-.artist_wrapper img {
+.artist_box_container .artist_wrapper img {
   width: 100%;
   height: 100%;
   border-radius: 150px;
 }
-.artist_wrapper:hover {
+.artist_box_container .artist_wrapper:hover {
   opacity: 0.8;
+}
+.artist_box_container .artist_name {
+  text-transform: capitalize;
 }/*# sourceMappingURL=style.css.map */

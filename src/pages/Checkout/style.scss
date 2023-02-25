@@ -9,7 +9,7 @@
   text-align: left;
   .checkout__describe-of-product {
     width: 550px;
-    min-height: 610px;
+    min-height: 510px;
     height: auto;
     background: $darkgray;
     display: flex;
@@ -17,7 +17,9 @@
     justify-content: flex-start;
     flex-direction: column;
     text-align: left;
-    padding: 30px 0;
+    padding: 0px 0 30px 0;
+    border-radius: 10px;
+    margin: 0 20px;
     .checkout__describe-of-product-container {
       width: 90%;
       margin: 0 auto;
@@ -41,36 +43,89 @@
           line-height: 18px;
           color: #ffffff;
         }
-        .qrcode_link{
+        .qrcode_link {
           font-size: 12px;
-          color: $textColor;padding: 20px;
+          color: $textColor;
+          padding: 20px;
         }
       }
-      .checkout__pix-paymente-container{
+      .checkout__pix-paymente-container {
         display: flex;
         align-items: center;
         justify-content: space-between;
         margin: 30px 0;
       }
-      .qrcode_image{
-        width: 200px;
-        height: 200px;
-        margin:30px auto;
-        border: 1px solid #ffffff23;
+      .box_info_plan {
+        width: 100%;
+        height: 60px;
+        color: #ffffff;
+        background: rgba(217, 217, 217, 0.12);
+        border-radius: 6px;
         display: flex;
         align-items: center;
-        justify-content: center;
-        img{
-          width: 90%;
-          height: 90%;
+        justify-content: space-between;
+        padding: 0 20px;
+        margin: 20px 0;
+        .text_info_plan {
+          font-family: 'Inter';
+          font-style: normal;
+          font-weight: 600;
+          font-size: 15px;
+          line-height: 18px;
         }
       }
+
     }
     .ui.checkbox {
       margin-left: 30px;
       label {
         color: #fff;
       }
+    }
+  }
+
+  .qrcode_image_container {
+    width: 547px;
+    min-height: 510px;
+    height: auto;
+    background: $darkgray;
+    border-radius: 10px;
+    margin: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding:0 30px;
+    .total_billing{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      color: #fff;
+      .price{
+        font-size: 20px;
+        &::before{
+          content: 'R$';
+        }
+        
+      }
+    }
+    .qrcode_image {
+      width: 200px;
+      height: 200px;
+      margin: 30px auto;
+      border: 1px solid #ffffff23;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      img {
+        width: 90%;
+        height: 90%;
+      }
+    }
+    .terms{
+  
+      color: $textColor;
     }
   }
 }

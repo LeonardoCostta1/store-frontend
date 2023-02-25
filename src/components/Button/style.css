@@ -7,9 +7,8 @@
   text-transform: capitalize;
   font-weight: 600;
   transition: all ease 0.2s;
-  background: #F1FA55;
-  background: linear-gradient(-90deg, #FD513E, rgb(254, 64, 253));
-  color: #ffffff;
+  background: #FFDA2A;
+  color: #000;
   border-radius: 62px;
   cursor: pointer;
 }

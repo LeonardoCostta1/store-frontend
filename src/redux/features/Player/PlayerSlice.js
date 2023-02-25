@@ -1,18 +1,27 @@
-import { createSlice } from "@reduxjs/toolkit";
+// playerSlice.js
+import { createSlice } from '@reduxjs/toolkit';
 
-const initialState = { value: false };
+const initialState = {
+  url: '',
+  playing: false,
+};
 
-const isPlayingSlice = createSlice({
-  name: "isPlaying",
+const playerSlice = createSlice({
+  name: 'player',
   initialState,
   reducers: {
-    setIsPlaying(state,action) {
-      state.value = action.payload;
+    play: state => {
+      state.playing = true;
     },
-    setTrackToPrincipalPlayer(state,action) {
-      state.value = action.payload;
+    pause: state => {
+      state.playing = false;
     },
-  }
+    setUrl: (state, action) => {
+      state.url = action.payload;
+    },
+  },
 });
-export const { setIsPlaying,setTrackToPrincipalPlayer} = isPlayingSlice.actions;
-export default isPlayingSlice.reducer;
+
+export const { play, pause, setUrl } = playerSlice.actions;
+
+export default playerSlice.reducer;

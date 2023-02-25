@@ -4,7 +4,7 @@ import { useDispatch } from "react-redux";
 import { verifyToken } from "../redux/features/auth/AuthSlice";
 import Login from "../pages/Login";
 import Home from "../pages/Home";
-// import Protected from "./Protected";
+import Protected from "./Protected";
 import Profile from "../pages/Profile";
 import { getTracks } from "../redux/features/tracks/TrackSlice";
 import { getOnlyTracks } from "../redux/features/onlyTrack/OnlyTrackSlice";
@@ -25,17 +25,17 @@ function Router() {
       <Route
         path="/profile"
         element={
-          // <Protected>
+          <Protected>
             <Profile />
-          // </Protected>
+          </Protected>
         }
       />
       <Route
         path="/checkout"
         element={
-          // <Protected>
+          <Protected>
             <Checkout />
-          // </Protected>
+          </Protected>
         }
       />
       <Route path="/" element={<Home />} />

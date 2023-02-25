@@ -9,8 +9,7 @@
   font-weight: 600;
   transition: all ease 0.2s;
   background: $color;
-  background: linear-gradient(-90deg,$linearGradient);
-  color: $white;
+  color: $dark;
   border-radius: 62px;
   cursor: pointer;
   &:hover {
