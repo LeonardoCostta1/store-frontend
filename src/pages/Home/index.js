@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import "./style.css";
-// import Track from "../../components/Player/Track";
 import Banner from "../../components/Banner";
 import { Popup, Grid } from "semantic-ui-react";
 import { useDispatch, useSelector } from "react-redux";
@@ -10,7 +9,6 @@ import PlayerSingle from "../../components/Player/PlayerSingle";
 
 function Home() {
   const tracks = useSelector((state) => state?.tracks?.data?.docs);
-  // const onlyTrack = useSelector((state) => state?.onlyTrack?.data);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -21,21 +19,10 @@ function Home() {
 
   return (
     <div className="home_wrapper">
-      <Banner/>
+      <Banner />
       <div className="home_container">
-        {/* <div className="left_card">
-          <div className="box">
-            <div className="cover">
-              <img src={onlyTrack?.cover} alt="cover" />
-            </div>
-            <div className="track_name">{onlyTrack?.name}</div>
-            <div className="artist_name">
-              {onlyTrack?.artist.map((art) => art?.name)}
-            </div>
-          </div>
-        </div> */}
         <div className="tracks_home_container">
-          <ArtistList/>
+          <ArtistList />
           <div className="filter_container">
             <Popup
               inverted
@@ -69,7 +56,7 @@ function Home() {
                 artist={track?.artist.map((art) => art.name)}
                 category={track?.category.map((cat) => cat?.category)}
                 id={track?._id}
-                audio={`${process.env.REACT_APP_API_REQUEST_LOCAL}/musicas/${track?._id}/play`}
+                audio={`${process.env.REACT_APP_API_REQUEST}/musicas/${track?._id}/play`}
                 price={track?.price}
                 track={tracks}
               />

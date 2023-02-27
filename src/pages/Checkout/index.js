@@ -11,11 +11,9 @@ function Checkout() {
       state?.checkout?.data?.response?.point_of_interaction?.transaction_data
   );
   const user = useSelector((state) => state.auth.loggedIn);
-
   const trackProduct = useSelector((state) => state.checkout.track);
-
   const dispatch = useDispatch();
-
+  
   const [checkoutData] = useState({
     transaction_amount: 0.01,
     description: trackProduct.track,
@@ -57,7 +55,6 @@ function Checkout() {
       </div>
       <div className="qrcode_image_container">
         <Title title={"your plan"} />
-
         <div className="total_billing">
           <Title title={"total billing"} />
           <div className="price">9.99</div>
