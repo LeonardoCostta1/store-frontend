@@ -25,10 +25,11 @@
     }
     .login-form__input {
       box-sizing: border-box;
+  
       width: 320px;
       height: 52px;
       border: 1px solid $white;
-      border-radius: 4px;
+      border-radius: 50px;
       background: none;
       margin-bottom: 20px;
       padding-left: 20px;
@@ -36,6 +37,14 @@
       &::placeholder {
         text-transform: capitalize;
       }
+      &:-webkit-autofill,
+      &:-webkit-autofill:hover,
+      &:-webkit-autofill:focus,
+      &:-webkit-autofill:active {
+        -webkit-box-shadow: 0 0 0 30px #000 inset !important;
+        -webkit-text-fill-color: #fff;
+      }
+
     }
     .login-form__forgot {
       font-style: normal;
@@ -44,6 +53,7 @@
       line-height: 17px;
       color: $white;
       margin-top: 20px;
+      margin-bottom: 20px;
     }
     .login-form__terms-container {
       width: 320px;

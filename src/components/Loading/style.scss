@@ -1,14 +1,24 @@
-.loading_wrapper{
-    background-color: #000;
-    height: 100vh;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: fixed;
-    top: 0;
-    z-index: 9999;
+@import '../../variables/variables';
+.loading_wrapper {
+  background-color: $dark;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  z-index: 9999;
+
+  .text_loading {
+    font-size: 12px;
+    margin-top: 20px;
+  }
+  .active {
+    background: none;
+  }
 }
-.display{
-    display: none!important;
+.display {
+  display: none !important;
 }

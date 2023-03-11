@@ -1,6 +1,6 @@
 @import "../../variables/variables";
 .banner_wrapper {
-  height: 40vh;
+  height: 50vh;
   width: 100%;
   background-size: cover;
   background-position: bottom;
@@ -13,7 +13,7 @@
   .overlay {
     height: 110vh;
     width: 100%;
-    background-image: linear-gradient(rgba(0, 0, 0, 0), #000 80%),
+    background-image: linear-gradient(rgba(0, 0, 0, 0), $dark 80%),
       url(../../assets/malha2.png);
     position: absolute;
     z-index: 1;
