@@ -47,8 +47,6 @@ function ArtistList() {
     <div className="artistList_wrapper">
       <Slider {...settings}>
         {artists?.map((artist,index) => {
-          console.log(artist?.artist.map((art)=>art.name))
-
           return <Artist key={index} cover={artist?.cover} name={artist?.artist.map((art)=>art.name)}/>;
         })}
       </Slider>

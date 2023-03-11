@@ -18,6 +18,7 @@
     z-index: 20;
       .tracks_home_container{
         width: 100%;
+       
         .filter_container{
           height: 30px;
           width: 100%;
@@ -35,6 +36,9 @@
             }
           }
         }
+      }
+      .tracks_container_initial{
+        border-top: 1px solid #ffffff21;
       }
   }
 }

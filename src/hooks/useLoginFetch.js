@@ -33,7 +33,6 @@ export function useLoginFetch() {
       .then((response) => {
         localStorage.setItem("token", response.data.tokens.token);
         navigate('/')
-        dispatch(setLoadingFalse());
       })
       .catch((error) => {
         dispatch(setLoadingFalse());

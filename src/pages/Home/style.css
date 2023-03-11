@@ -1,5 +1,5 @@
 .home_wrapper {
-  background: #000;
+  background: #0e0e0e;
   color: #ffffff;
   min-height: 100vh;
   height: auto;
@@ -10,7 +10,7 @@
   padding: 100px 0;
 }
 .home_wrapper .home_container {
-  width: calc(100% - 100px);
+  width: calc(100% - 300px);
   display: flex;
   align-items: flex-start;
   justify-content: center;
@@ -36,4 +36,7 @@
 }
 .home_wrapper .home_container .tracks_home_container .filter_container .filter_name i {
   font-size: 10px;
+}
+.home_wrapper .home_container .tracks_container_initial {
+  border-top: 1px solid rgba(255, 255, 255, 0.1294117647);
 }/*# sourceMappingURL=style.css.map */

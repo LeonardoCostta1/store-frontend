@@ -4,8 +4,9 @@
   justify-content: space-between;
   flex-direction: row;
   width: 100%;
-  height: 70px;
+  height: 100px;
   margin-bottom: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1294117647);
 }
 .player .music_information {
   display: flex;
@@ -34,6 +35,7 @@
   cursor: pointer;
   transition: all ease 0.2s;
   margin: 0 20px;
+  border: none;
 }
 .player .music_information button i {
   display: flex;

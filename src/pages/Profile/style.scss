@@ -1,9 +1,83 @@
 @import '../../variables/variables';
-.profile_wrapper{
-    background: $dark;
-    color: $white;
-    height: 100vh;
+.profile_wrapper {
+  background: $dark;
+  color: $white;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .profile_container_all {
+    border: 1px solid #ffffff23;
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 20px;
+
+    .profile_container {
+      width: 630px;
+      height: 610px;
+      background-color: $darkgray;
+      padding: 20px 30px 20px 30px;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      flex-direction: column;
+      .box_profile {
+        margin-bottom: 40px;
+        .subtitle {
+          font-family: 'Inter';
+          font-style: normal;
+          font-weight: 600;
+          font-size: 13px;
+          line-height: 16px;
+          color: #797e80;
+        }
+        .info {
+          font-family: 'Inter';
+          font-style: normal;
+          font-weight: 700;
+          font-size: 18px;
+          line-height: 22px;
+          text-transform: capitalize;
+
+          color: #ffffff;
+        }
+
+        .boxed-myplan {
+          box-sizing: border-box;
+          width: 586px;
+          height: 60px;
+          background: rgba(255, 218, 42, 0.06);
+          border: 1px solid #ffda2a;
+          border-radius: 6px;
+          margin-top: 10px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          display: flex;
+          padding: 0 30px;
+          .subtitle {
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 22px;
+            text-transform: capitalize;
+
+            color: #ffffff;
+          }
+
+          .change-your-plan {
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 15px;
+            line-height: 18px;
+
+            color: #ffda2a;
+          }
+        }
+      }
+    }
+  }
 }

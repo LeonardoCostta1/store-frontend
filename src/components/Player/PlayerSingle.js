@@ -2,13 +2,9 @@ import React, { useEffect, useRef, useState } from "react";
 import WaveSurfer from "wavesurfer.js";
 import Button from "../Button";
 import "./style.css";
-import { getOnlyTracks } from "../../redux/features/onlyTrack/OnlyTrackSlice";
-import { useDispatch } from "react-redux";
-import { useNavigate } from "react-router-dom";
-import { setTrackToCheckout } from "../../redux/features/checkout/CheckoutSLice";
-function PlayerSingle({ cover, name, artist, category, audio, id, price }) {
+import { http } from "../../services/axios";
+function PlayerSingle({ cover, name, artist, category, audio, id }) {
   const [isPlaying, toggleIsPlaying] = useState(false);
-  const dispatch = useDispatch();
   const containerRef = useRef();
   const waveSurferRef = useRef({
     isPlaying: () => false
@@ -53,13 +49,21 @@ function PlayerSingle({ cover, name, artist, category, audio, id, price }) {
   const togglelay = () => {
     waveSurferRef.current.playPause();
     toggleIsPlaying(waveSurferRef.current.isPlaying());
-    if (waveSurferRef.current.isPlaying()) dispatch(getOnlyTracks(id));
   };
 
-  const navigate = useNavigate();
-  const addTrackToCheckout = () => {
-    dispatch(setTrackToCheckout({ id }));
-    navigate("/checkout");
+  const downloadTrack = async (idtrack) => {
+    try {
+      const response = await http.get(`/track/${idtrack}/download`, {
+        headers: {
+          Authorization: process.env.REACT_APP_TOKEN_DEFAULT,
+        }
+      });
+      console.log(response)
+      return response.data;
+    } catch (error) {
+      console.error(error);
+      return false;
+    }
   };
 
   return (
@@ -88,9 +92,9 @@ function PlayerSingle({ cover, name, artist, category, audio, id, price }) {
         )} / ${formatTime(duration === "0:00" ? 0 : duration)}`}</div>
       </div>
       <Button
-        title={price}
+        title={'download'}
         type={"small"}
-        onClick={() => addTrackToCheckout()}
+        onClick={() => downloadTrack(id)}
       />
     </div>
   );

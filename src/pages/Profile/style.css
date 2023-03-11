@@ -1,8 +1,76 @@
 .profile_wrapper {
-  background: #000;
+  background: #0e0e0e;
   color: #ffffff;
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.profile_wrapper .profile_container_all {
+  border: 1px solid rgba(255, 255, 255, 0.137254902);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+.profile_wrapper .profile_container_all .profile_container {
+  width: 630px;
+  height: 610px;
+  background-color: #1d1d1d;
+  padding: 20px 30px 20px 30px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.profile_wrapper .profile_container_all .profile_container .box_profile {
+  margin-bottom: 40px;
+}
+.profile_wrapper .profile_container_all .profile_container .box_profile .subtitle {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 16px;
+  color: #797e80;
+}
+.profile_wrapper .profile_container_all .profile_container .box_profile .info {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+  text-transform: capitalize;
+  color: #ffffff;
+}
+.profile_wrapper .profile_container_all .profile_container .box_profile .boxed-myplan {
+  box-sizing: border-box;
+  width: 586px;
+  height: 60px;
+  background: rgba(255, 218, 42, 0.06);
+  border: 1px solid #ffda2a;
+  border-radius: 6px;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  display: flex;
+  padding: 0 30px;
+}
+.profile_wrapper .profile_container_all .profile_container .box_profile .boxed-myplan .subtitle {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+  text-transform: capitalize;
+  color: #ffffff;
+}
+.profile_wrapper .profile_container_all .profile_container .box_profile .boxed-myplan .change-your-plan {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 18px;
+  color: #ffda2a;
 }/*# sourceMappingURL=style.css.map */
