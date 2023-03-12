@@ -1,33 +1,31 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
+
 import { Radio } from "semantic-ui-react";
+
 import Button from "../../components/Button";
+
 import "./style.css";
+
 import Title from "../../components/Title";
-import { getCheckout } from "../../redux/features/checkout/CheckoutSLice";
-import { useDispatch, useSelector } from "react-redux";
-import $ from 'jquery';
+
+import { useSelector } from "react-redux";
+
+import $ from "jquery";
+
 function Checkout() {
-  const user = useSelector((state) => state.authenticated.user);
-  const dispatch = useDispatch();
+  // const user = useSelector((state) => state.authenticated.user);
+  const plans = useSelector((state) => state.plans.data);
 
-  const [checkoutData] = useState({
-    email: user.email,
-    first_name: user.displayName,
-    last_name: user.displayName,
-    userId: user.uid
-  });
-  const getPixQrCode = () => {
-    dispatch(getCheckout(checkoutData));
-  };
-
-  useEffect(()=>{
-    $(document).ready(function(){
-      $('.checkout_container .qrcode_image_container .box_plans').click(function(){
-        $('.qrcode_image_container .box_plans').removeClass("actived");
-        $(this).addClass("actived");
+  useEffect(() => {
+    $(document).ready(function () {
+      $(".checkout_container .qrcode_image_container .box_plans").click(
+        function () {
+          $(".qrcode_image_container .box_plans").removeClass("actived");
+          $(this).addClass("actived");
+        }
+      );
     });
-    });
-  },[])
+  }, []);
 
   return (
     <div className="checkout">
@@ -57,44 +55,23 @@ function Checkout() {
           </div>
         </div>
         <div className="qrcode_image_container">
+          {plans.map((plan,index) => {
+            return (
+              <div className={`box_plans ${index === 0 && 'actived'}`}>
+                <div className="description_container">
+                  <div className="title_plan">{plan.name}</div>
+                  <div className="decription_plan">{plan.description}</div>
+                </div>
 
-
-          <div className={`box_plans actived`}>
-            <div className="description_container">
-              <div className="title_plan">starter</div>
-              <div className="decription_plan">
-                Pick a subscription and try one month for free. Cancel anytime.
+                <div className="price">R$ {plan.price}</div>
               </div>
-            </div>
+            );
+          })}
 
-            <div className="price">R$ 19,90</div>
-          </div>
-
-          <div className={`box_plans`}>
-            <div className="description_container">
-              <div className="title_plan">standart</div>
-              <div className="decription_plan">
-                Pick a subscription and try one month for free. Cancel anytime.
-              </div>
-            </div>
-
-            <div className="price">R$ 29,90</div>
-          </div>
-
-          <div className={`box_plans`}>
-            <div className="description_container">
-              <div className="title_plan">pro</div>
-              <div className="decription_plan">
-                Pick a subscription and try one month for free. Cancel anytime.
-              </div>
-            </div>
-
-            <div className="price">R$ 59,90</div>
-          </div>
           <Title title={"Payment Method"} />
           <div className="checkout__pix-paymente-container">
             <Radio label="Pix Payment" defaultChecked />
-            <Button title="gerar pix" onClick={() => getPixQrCode()} />
+            <Button title="gerar pix" />
           </div>
         </div>
       </div>

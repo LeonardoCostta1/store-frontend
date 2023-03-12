@@ -32,7 +32,8 @@
   font-weight: 600;
   font-size: 13px;
   line-height: 16px;
-  color: #797e80;
+  color: #797979;
+  text-transform: capitalize;
 }
 .profile_wrapper .profile_container_all .profile_container .box_profile .info {
   font-family: "Inter";
@@ -47,8 +48,7 @@
   box-sizing: border-box;
   width: 586px;
   height: 60px;
-  background: rgba(255, 218, 42, 0.06);
-  border: 1px solid #ffda2a;
+  border: 1px solid #AA4AF3;
   border-radius: 6px;
   margin-top: 10px;
   display: flex;
@@ -66,11 +66,22 @@
   text-transform: capitalize;
   color: #ffffff;
 }
+.profile_wrapper .profile_container_all .profile_container .box_profile .boxed-myplan .subtitle span {
+  font-size: 10px;
+  text-transform: uppercase;
+  margin-right: 10px;
+}
 .profile_wrapper .profile_container_all .profile_container .box_profile .boxed-myplan .change-your-plan {
   font-family: "Inter";
   font-style: normal;
   font-weight: 600;
   font-size: 15px;
   line-height: 18px;
-  color: #ffda2a;
+  color: #AA4AF3;
+}
+.profile_wrapper .profile_container_all .profile_container .box_profile .boxed-myplan .change-your-plan span {
+  font-size: 10px;
+  text-transform: uppercase;
+  margin-right: 10px;
+  color: #ffffff;
 }/*# sourceMappingURL=style.css.map */

@@ -10,7 +10,7 @@
 .checkout .checkout_container {
   border: 1px solid rgba(255, 255, 255, 0.137254902);
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   padding: 20px;
 }
@@ -144,5 +144,5 @@
 }
 
 .actived {
-  border: 2px solid #FFDA2A !important;
+  border: 2px solid #AA4AF3 !important;
 }/*# sourceMappingURL=style.css.map */

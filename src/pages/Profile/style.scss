@@ -30,7 +30,8 @@
           font-weight: 600;
           font-size: 13px;
           line-height: 16px;
-          color: #797e80;
+          color: $textColor;
+          text-transform: capitalize;
         }
         .info {
           font-family: 'Inter';
@@ -40,15 +41,14 @@
           line-height: 22px;
           text-transform: capitalize;
 
-          color: #ffffff;
+          color: $white;
         }
 
         .boxed-myplan {
           box-sizing: border-box;
           width: 586px;
           height: 60px;
-          background: rgba(255, 218, 42, 0.06);
-          border: 1px solid #ffda2a;
+          border: 1px solid $color;
           border-radius: 6px;
           margin-top: 10px;
           display: flex;
@@ -63,8 +63,12 @@
             font-size: 18px;
             line-height: 22px;
             text-transform: capitalize;
-
-            color: #ffffff;
+            color: $white;
+            span {
+              font-size: 10px;
+              text-transform: uppercase;
+              margin-right: 10px;
+            }
           }
 
           .change-your-plan {
@@ -73,8 +77,13 @@
             font-weight: 600;
             font-size: 15px;
             line-height: 18px;
-
-            color: #ffda2a;
+            color: $color;
+            span {
+              font-size: 10px;
+              text-transform: uppercase;
+              margin-right: 10px;
+              color: $white;
+            }
           }
         }
       }

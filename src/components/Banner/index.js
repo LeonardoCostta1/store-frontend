@@ -3,8 +3,11 @@ import React from "react";
 import "./style.css";
 import Button from "../Button";
 import bg from "../../assets/bgmin.mp4";
-
+import { useTranslation } from "react-i18next";
 function Banner() {
+
+  const {t} = useTranslation();
+
   return (
     <div className="banner_wrapper">
       <div className="overlay" />
@@ -12,9 +15,9 @@ function Banner() {
         <source src={bg} type="video/mp4" />
       </video>
       <div className="text_banner_container">
-        <div className="text">start creating today with unlimeted sounds</div>
+        <div className="text">{t('start creating today with unlimeted sounds')}</div>
 
-        <Button title={"continue"} />
+        <Button title={"continue"}/>
       </div>
     </div>
   );

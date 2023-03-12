@@ -1,27 +1,27 @@
 @import '../../variables/variables';
-.logo{
-    font-family: 'Poppins', sans-serif;
-    text-transform: capitalize;
+.logo {
+  font-family: 'Poppins', sans-serif;
+  text-transform: capitalize;
+  color: $white;
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: -1px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+
+  a {
     color: $white;
-    font-size: 22px;
-    font-weight: 600;
-    letter-spacing: -1px;
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100%;
-
-    a{
-        color: $white;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        .boxlogo{
-            height: 20px;
-            width: 20px;
-            border-radius: 50px;
-            background: $color;
-            background: linear-gradient(-90deg,$linearGradient);
-        }
+    .boxlogo {
+      height: 20px;
+      width: 20px;
+      border-radius: 50px;
+      background: $color;
+      margin-right: 10px;
     }
+  }
 }

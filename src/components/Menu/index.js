@@ -5,39 +5,64 @@ import Button from "../Button";
 import { Popup, Grid, Image } from "semantic-ui-react";
 import { Link } from "react-router-dom";
 import { useSignOut } from "../../hooks/useSignOut";
-import { useSelector } from "react-redux";
-function Menu() {
-  const authenticated = useSelector((state) => state.authenticated.user);
+import { useDispatch, useSelector } from "react-redux";
+import usa from "../../assets/img/estadosunidos.svg";
+import brasil from "../../assets/img/brasil.svg";
+import { setEN, setPT } from "../../redux/features/translate/translateSlice";
 
-  console.log(authenticated?.photoURL);
+function Menu() {
+  const dispatch = useDispatch();
+
+  const authenticated = useSelector((state) => state?.authenticated?.user);
+
+  const translate = useSelector((state) => state?.translate?.value);
+
+  const plan = useSelector((state) => state?.plan?.data);
 
   const [handleSignOut] = useSignOut();
 
   const [scroll, setScroll] = useState(false);
+
+  
+  const [flag, setFlag] = useState(usa);
+
   useEffect(() => {
     window.addEventListener("scroll", () => {
       setScroll(window.scrollY > 50);
     });
   }, []);
 
+  const handleLanguage = () => {
+    if (translate === 'en-US') {
+
+      dispatch(setPT());
+      setFlag(brasil)
+
+    }else{
+      dispatch(setEN());
+      setFlag(usa)
+    }
+
+  };
+
   return (
     <div className={`menu_wrapper ${scroll ? "active" : ""}`}>
       <div className="menu_container">
         <div className="menu_container_logo_and_drag">
-          <div className="logo_drag_container">
-            <div />
-            <div />
-            <div />
-          </div>
           <Logo />
         </div>
-
         <div className="user_wrapper">
-          {!authenticated ? (
-            <Link to={"/signin"}>
+
+          <div className="language" onClick={() => handleLanguage()}>
+            <img src={flag} alt="flag" />
+          </div>
+
+          {!plan ? (
+            <Link to={"/checkout"}>
               <Button title={"subscribe now!"} type={"small"} />
             </Link>
           ) : null}
+
           {authenticated && (
             <Popup
               inverted
@@ -63,15 +88,18 @@ function Menu() {
                 <div className="username_container">
                   <div className="user_photo">
                     <div className="icon_top user_container">
-                      <Image
-                        src={`${
-                          authenticated?.photoURL
-                            ? authenticated?.photoURL
-                            : "https://react.semantic-ui.com/images/wireframe/square-image.png"
-                        }`}
-                        size="medium"
-                        circular
-                      />
+                      {!authenticated?.photoURL ? (
+                        <img
+                          src="https://react.semantic-ui.com/images/wireframe/square-image.png"
+                          alt="cover"
+                        />
+                      ) : (
+                        <Image
+                          src={authenticated?.photoURL}
+                          size="medium"
+                          circular
+                        />
+                      )}
                     </div>
                   </div>
                 </div>

@@ -1,4 +1,20 @@
 .artistList_wrapper {
   height: 170px;
   margin: 50px 0 50px 0;
+
+ .slick-next {
+    color: #fff;
+    &::before{
+      font-family: "FontAwesome";
+      content: "\f054";
+    }
+}
+
+.slick-prev{
+  color: #fff;
+  &::before{
+    font-family: "FontAwesome";
+    content: "\f053";
+  }
+}
 }

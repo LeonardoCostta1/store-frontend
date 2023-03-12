@@ -8,6 +8,7 @@ import { http } from "../services/axios";
 const provider = new GoogleAuthProvider();
 
 export function useSignInWithGoogle() {
+
   const auth = getAuth(app);
 
   const [error, setError] = useState(null);
@@ -15,7 +16,9 @@ export function useSignInWithGoogle() {
   const navigate = useNavigate();
 
   const handleSignInWithGoogle = () => {
+
     navigate("/load");
+
     signInWithRedirect(auth, provider)
       .then((result) => {
         const { uid, email, displayName } = result.user;
@@ -35,9 +38,7 @@ export function useSignInWithGoogle() {
           .catch((err) => {
             console.log(err);
           });
-
         GoogleAuthProvider.credentialFromResult(result);
-
         setauthenticatedTrue(result);
       })
       .catch((error) => {

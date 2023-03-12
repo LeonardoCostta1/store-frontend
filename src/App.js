@@ -4,7 +4,9 @@ import "./App.css";
 import Router from "./routes";
 import { useSelector } from "react-redux";
 import Loading from "../src/components/Loading";
+
 // import Player from "./components/Player/Player";
+
 import Menu from "./components/Menu";
 
 function App() {
@@ -12,7 +14,7 @@ function App() {
   return (
     <div className="App">
       {load && <Loading />}
-      <Menu/>
+      <Menu />
       <Router />
       {/* <Player /> */}
     </div>

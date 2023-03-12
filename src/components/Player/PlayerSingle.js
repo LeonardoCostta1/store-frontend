@@ -3,7 +3,9 @@ import WaveSurfer from "wavesurfer.js";
 import Button from "../Button";
 import "./style.css";
 import { http } from "../../services/axios";
+import { useSelector } from "react-redux";
 function PlayerSingle({ cover, name, artist, category, audio, id }) {
+  const plan = useSelector((state) => state?.plan?.data);
   const [isPlaying, toggleIsPlaying] = useState(false);
   const containerRef = useRef();
   const waveSurferRef = useRef({
@@ -55,10 +57,10 @@ function PlayerSingle({ cover, name, artist, category, audio, id }) {
     try {
       const response = await http.get(`/track/${idtrack}/download`, {
         headers: {
-          Authorization: process.env.REACT_APP_TOKEN_DEFAULT,
+          Authorization: process.env.REACT_APP_TOKEN_DEFAULT
         }
       });
-      console.log(response)
+      console.log(response);
       return response.data;
     } catch (error) {
       console.error(error);
@@ -91,11 +93,14 @@ function PlayerSingle({ cover, name, artist, category, audio, id }) {
           current === "0:00" ? 0 : current
         )} / ${formatTime(duration === "0:00" ? 0 : duration)}`}</div>
       </div>
-      <Button
-        title={'download'}
-        type={"small"}
-        onClick={() => downloadTrack(id)}
-      />
+
+      {plan && (
+        <Button
+          title={"download"}
+          type={"small"}
+          onClick={() => downloadTrack(id)}
+        />
+      )}
     </div>
   );
 }

@@ -6,8 +6,9 @@ import { Link } from "react-router-dom";
 function Logo() {
   return (
     <div className="logo">
-     
-      <Link to={"/"}> <div className="boxlogo"></div> sonora</Link>
+      <Link to={"/"}>
+        <div className="boxlogo"></div> sonora
+      </Link>
     </div>
   );
 }

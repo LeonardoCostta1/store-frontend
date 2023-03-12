@@ -15,6 +15,7 @@ function Home() {
       <div className="home_container">
         <div className="tracks_home_container">
           <ArtistList />
+          <ArtistList />
           <div className="filter_container">
             <Popup
               inverted

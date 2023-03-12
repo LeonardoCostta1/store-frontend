@@ -1,7 +1,7 @@
 @import '../../variables/variables';
 .menu_wrapper {
   // background: linear-gradient(#333333,#00000000);
-  background: #333333;
+  background: $dark;
   width: 100%;
   height: 50px;
   display: flex;
@@ -16,35 +16,22 @@
     justify-content: space-between;
     height: 100%;
     width: calc(100% - ($side / 4));
-
-    .menu_container_logo_and_drag{
+    .menu_container_logo_and_drag {
       display: flex;
       align-items: center;
       justify-content: center;
-      .logo_drag_container{
-        height: 35px;
-        width: 35px;
-        border-radius: 50px;
-        background: #555;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        margin-right: 10px;
-  
-        div{
-          height: 2px;
-          width: 60%;
-          background: #fff;
-          margin-bottom: 3px;
-        }
-      }
     }
 
     .user_wrapper {
       display: flex;
       align-items: center;
       justify-content: center;
+
+      .language {
+        height: 20px;
+        width: 20px;
+        cursor: pointer;
+      }
 
       .icon_top {
         width: 35px;
@@ -67,7 +54,17 @@
         width: 35px;
         height: 35px;
         border-radius: 35px;
-        background: $darkgray;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img {
+          width: 35px;
+          height: 35px;
+          border-radius: 35px;
+          background: url(https://react.semantic-ui.com/images/wireframe/square-image.png)
+            no-repeat;
+          background-size: contain;
+        }
       }
 
       .username_container {
@@ -89,21 +86,20 @@
   justify-content: flex-start;
   text-transform: capitalize;
   font-weight: 500;
-  a{
+  a {
     color: $white;
   }
-  &:hover{
+  &:hover {
     background: #ffffff23;
   }
 }
 
-.pop{
-  width: 150px!important;
+.pop {
+  width: 150px !important;
   padding: 0;
 }
 
-.active{
-
+.active {
   height: 50px;
   background: $dark;
 }

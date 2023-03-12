@@ -7,6 +7,10 @@
   height: 100px;
   margin-bottom: 10px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1294117647);
+  transition: all ease 0.2s;
+}
+.player:hover {
+  background: rgba(255, 255, 255, 0.0470588235);
 }
 .player .music_information {
   display: flex;
@@ -17,11 +21,11 @@
 .player .music_information .music_information__cover {
   width: 50px;
   height: 50px;
-  background: #d9d9d9;
 }
 .player .music_information .music_information__cover img {
   width: 100%;
   height: 100%;
+  border-radius: 5px;
 }
 .player .music_information button {
   width: 50px;
@@ -62,6 +66,7 @@
   line-height: 17px;
   text-transform: capitalize;
   color: #797979;
+  font-weight: 700;
 }
 .player .category {
   text-transform: capitalize;

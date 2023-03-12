@@ -10,11 +10,12 @@ function ArtistList() {
     dots: true,
     infinite: true,
     speed: 500,
-    arrows:false,
+    arrows:true,
     centerMode:true,
     slidesToShow: 9,
-    slidesToScroll: 9,
+    slidesToScroll: 1,
     initialSlide: 0,
+    swipeToSlide: true,
     responsive: [
       {
         breakpoint: 1024,

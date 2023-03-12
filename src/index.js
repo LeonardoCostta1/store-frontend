@@ -9,6 +9,10 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import App from "./App";
 import { PersistGate } from "redux-persist/integration/react";
+
+import './i18n'
+
+
 const container = document.getElementById("root");
 const root = createRoot(container);
 
